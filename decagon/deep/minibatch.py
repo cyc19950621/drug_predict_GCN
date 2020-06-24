@@ -134,7 +134,7 @@ class EdgeMinibatchIterator(object):#mini batch 梯度下降
         finished = len(self.freebatch_edge_types) == 0
         return finished
 
-    def update_feed_dict(self, feed_dict, dropout, placeholders):
+    def update_feed_dict(self, feed_dict, dropout, placeholders):#更新feed dict
         # construct feed dictionary
         feed_dict.update({
             placeholders['adj_mats_%d,%d,%d' % (i,j,k)]: self.adj_train[i,j][k]
@@ -144,7 +144,7 @@ class EdgeMinibatchIterator(object):#mini batch 梯度下降
 
         return feed_dict
 
-    def batch_feed_dict(self, batch_edges, batch_edge_type, placeholders):
+    def batch_feed_dict(self, batch_edges, batch_edge_type, placeholders):#设定当前训练的feed dict
         feed_dict = dict()
         feed_dict.update({placeholders['batch']: batch_edges})
         feed_dict.update({placeholders['batch_edge_type_idx']: batch_edge_type})
