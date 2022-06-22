@@ -7,7 +7,7 @@ grpcio==1.29.0
 html5lib==1.0.1
 Markdown==3.2.2
 networkx==2.4
-numpy==1.18.5
+numpy==1.22.0
 protobuf==3.10.0
 scikit-learn==0.22.2.post1
 scipy==1.4.1
